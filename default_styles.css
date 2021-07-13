@@ -1,73 +1,262 @@
-section #services {
-  text-align: center;
-  transform: translatez(0);
+div.center_nav {
+  position: relative;
+  left: 48px;
 }
-section #services li {
-  width: 50px;
-  height: 70px;
-  display: inline-block;
-  margin: 20px;
-  list-style: none;
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:300);
+
+body {
+  font-family: "Alegreya Sans", sans-serif;
 }
-section #services li div {
-  width: 60;
-  height: 60;
-  color: #74d4b3;
-  font-size: 3.4em;
-  text-align: center;
-  line-height: 60px;
-  background-color: #fff;
-  transition: all 0.7s ease;
+
+/* Sticky footer position and size
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
 }
-section #services li a {
-  color: #77cc6d;
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 300px;
 }
-section #services li div:hover {
-  transform: rotate(360deg);
-  border-radius: 50;
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 300px;
 }
-section #services li span {
-  width: 60;
-  height: 10;
-  display: block;
-  padding: 15px 0px;
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 1.2em;
-  text-align: center;
+
+/* Taller footer on small screens */
+@media (max-width: 567em) {
+  body {
+    margin-bottom: 700px;
+  }
+  .footer {
+    height: 700px;
+  }
 }
-/* All social media icon styling: */
-/* Style all font awesome icons */
-.nav-social-stuff {
-  padding: 10px;
-  font-size: 30px;
-  width: 58px;
-  text-align: center;
+
+/* Sticky footer style and color
+-------------------------------------------------- */
+footer {
+  padding-top: 30px;
+  background-color: #292c2f;
+  color: #bbb;
+  position: relative;
+  height: 2em;
+  bottom: 0;
+}
+
+footer a {
+  color: #999;
   text-decoration: none;
-  transform: scale(0.8, 0.8);
 }
 
-/* Add a hover effect if you want */
-.nav-social-hover a:hover {
-  opacity: 0.7;
+footer a:hover,
+footer a:focus {
+  color: #aaa;
+  text-decoration: none;
+  border-bottom: 1px dotted #999;
 }
 
-/* Set a specific color for each brand */
+footer .form-control {
+  background-color: #1f2022;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  border: none;
+  resize: none;
+  color: #d1d2d2;
+  padding: 0.7em 1em;
+}
 
-/* Twitter */
-.ICON-twitter {
-  background: #55acee;
+/* Footer Credits: https://www.codeply.com/p/EJd6H4Ejyi */
+
+.footer_links {
+  font-style: italic;
+}
+
+/* This is for the slide in animations */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+.site-logo {
+  font-weight: 900;
+  font-size: 0.8rem;
+  color: var(--text);
+  text-decoration: none;
+}
+
+header {
+  --text: #f4f4f4;
+  --text-inverse: #333;
+  --background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 3em;
+  transition: background 250ms ease-in;
+  background: var(--background);
+  color: var(--text);
+}
+
+.nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav__link {
+  --spacing: 1em;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  padding: calc(var(--spacing) / 2) var(--spacing);
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+}
+
+.nav__link:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: var(--spacing);
+  right: var(--spacing);
+  height: 2px;
+  background: currentColor;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  transition: -webkit-transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+}
+
+.nav__link:hover::after {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+.nav__link--btn {
+  border: 1.5px solid currentColor;
+  border-radius: 2em;
+  margin-left: 1em;
+  transition: background 250ms ease-in-out;
+  letter-spacing: 1px;
+  padding: 0.75em 1.5em;
+}
+
+.nav__link--btn:hover {
+  background: var(--text);
+  color: var(--text-inverse);
+  border-color: var(--text);
+}
+
+.nav__link--btn::after {
+  display: none;
+}
+
+.nav__link--btn--highlight {
+  background: limegreen;
+  border-color: limegreen;
+  color: #333;
+}
+
+.nav__link--btn--highlight:hover {
+  background: var(--text);
+  border-color: var(--text);
+}
+
+.nav-scrolled {
+  --text: #333;
+  --text-inverse: #f4f4f4;
+  --background: #f4f4f4;
+  box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+}
+
+.home-intro {
+  padding: 50vh 0;
+  background: #123 url(images/shop_front_1.jpg);
+  background-size: cover;
+  background-blend-mode: multiply;
   color: white;
+  text-align: center;
 }
 
-/* Twitter */
-.ICON-github {
-  background: #545555;
-  color: white;
+.home-about {
+  padding: 4em 0;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-/* Twitter */
-.ICON-linkedin {
-  background: #007bb5;
-  color: white;
+.columns {
+  display: flex;
+}
+
+.col + .col {
+  margin-left: 1.5em;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
+.more-stuff-grid {
+  background: #f4f4f4;
+  padding: 4em 0;
+  display: grid;
+  grid-gap: 2em;
+  align-items: center;
+  grid-template-columns: minmax(1em, 1fr) repeat(2, minmax(200px, 400px)) minmax(
+      1em,
+      1fr
+    );
+}
+
+.from-left {
+  grid-column: 2 / 3;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.from-right {
+  grid-column: 3 / 4;
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+}
+
+.from-left,
+.from-right {
+  transition: opacity 250ms ease-in, -webkit-transform 400ms ease-in;
+  transition: opacity 250ms ease-in, transform 400ms ease-in;
+  transition: opacity 250ms ease-in, transform 400ms ease-in,
+    -webkit-transform 400ms ease-in;
+  opacity: 0;
+}
+
+.from-left.appear,
+.from-right.appear {
+  -webkit-transform: translateX(0);
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.heading_1 {
+  font-size: 4vh;
+}
+.heading_2 {
+  font-size: 1.7vh;
 }
