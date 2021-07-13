@@ -1,4 +1,73 @@
-div.center_nav {
-  position: relative;
-  left: 48px;
+section #services {
+  text-align: center;
+  transform: translatez(0);
+}
+section #services li {
+  width: 50px;
+  height: 70px;
+  display: inline-block;
+  margin: 20px;
+  list-style: none;
+}
+section #services li div {
+  width: 60;
+  height: 60;
+  color: #74d4b3;
+  font-size: 3.4em;
+  text-align: center;
+  line-height: 60px;
+  background-color: #fff;
+  transition: all 0.7s ease;
+}
+section #services li a {
+  color: #77cc6d;
+}
+section #services li div:hover {
+  transform: rotate(360deg);
+  border-radius: 50;
+}
+section #services li span {
+  width: 60;
+  height: 10;
+  display: block;
+  padding: 15px 0px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  text-align: center;
+}
+/* All social media icon styling: */
+/* Style all font awesome icons */
+.nav-social-stuff {
+  padding: 10px;
+  font-size: 30px;
+  width: 58px;
+  text-align: center;
+  text-decoration: none;
+  transform: scale(0.8, 0.8);
+}
+
+/* Add a hover effect if you want */
+.nav-social-hover a:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Twitter */
+.ICON-twitter {
+  background: #55acee;
+  color: white;
+}
+
+/* Twitter */
+.ICON-github {
+  background: #545555;
+  color: white;
+}
+
+/* Twitter */
+.ICON-linkedin {
+  background: #007bb5;
+  color: white;
 }

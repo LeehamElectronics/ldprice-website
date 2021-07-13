@@ -1,209 +1,208 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
-    <link
-      rel="apple-touch-icon"
-      type="image/png"
-      href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png"
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liam Price</title>
+    <meta
+      name="keywords"
+      content="Liam Price, ldprice, Leeham, LeehamElectronics"
     />
-    <meta name="apple-mobile-web-app-title" content="CodePen" />
-
-    <link
-      rel="shortcut icon"
-      type="image/x-icon"
-      href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico"
+    <meta
+      name="description"
+      content="Liam Price's Personal Website. ldprice.com is my main webpage, take a look!"
     />
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/jpg" href="images/logo_png.png" />
+    <!-- Latest compiled and minified CSS -->
     <link
-      rel="mask-icon"
-      type=""
-      href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg"
-      color="#111"
-    />
-
-    <title>CodePen - Hovering Navigation Bar</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
     />
+    <!-- Load CSS Styles from Local File -->
+    <link href="default_styles.css" rel="stylesheet" type="text/css" />
 
-    <style>
-      .hoverable {
-        display: inline-block;
-        backface-visibility: hidden;
-        vertical-align: middle;
-        position: relative;
-        box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-        tranform: translateZ(0);
-        transition-duration: 0.3s;
-        transition-property: transform;
-      }
-
-      .hoverable:before {
-        position: absolute;
-        pointer-events: none;
-        z-index: -1;
-        content: "";
-        top: 100%;
-        left: 5%;
-        height: 10px;
-        width: 90%;
-        opacity: 0;
-        background: -webkit-radial-gradient(
-          center,
-          ellipse,
-          rgba(255, 255, 255, 0.35) 0%,
-          rgba(255, 255, 255, 0) 80%
-        );
-        background: radial-gradient(
-          ellipse at center,
-          rgba(255, 255, 255, 0.35) 0%,
-          rgba(255, 255, 255, 0) 80%
-        );
-        /* W3C */
-        transition-duration: 0.3s;
-        transition-property: transform, opacity;
-      }
-
-      .hoverable:hover,
-      .hoverable:active,
-      .hoverable:focus {
-        transform: translateY(-5px);
-      }
-
-      .hoverable:hover:before,
-      .hoverable:active:before,
-      .hoverable:focus:before {
-        opacity: 1;
-        transform: translateY(-5px);
-      }
-
-      @keyframes bounce-animation {
-        16.65% {
-          -webkit-transform: translateY(8px);
-          transform: translateY(8px);
-        }
-        33.3% {
-          -webkit-transform: translateY(-6px);
-          transform: translateY(-6px);
-        }
-        49.95% {
-          -webkit-transform: translateY(4px);
-          transform: translateY(4px);
-        }
-        66.6% {
-          -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
-        }
-        83.25% {
-          -webkit-transform: translateY(1px);
-          transform: translateY(1px);
-        }
-        100% {
-          -webkit-transform: translateY(0);
-          transform: translateY(0);
-        }
-      }
-      .bounce {
-        animation-name: bounce-animation;
-        animation-duration: 2s;
-      }
-
-      /*everything below here is just setting up the page, so dont worry about it */
-      @media (min-width: 768px) {
-        .navbar {
-          text-align: center !important;
-          float: none;
-          display: inline-block;
-        }
-      }
-      body {
-        background-color: black;
-        font-weight: 600;
-        text-align: center !important;
-        color: white;
-      }
-
-      nav {
-        background: none !important;
-        text-transform: uppercase;
-      }
-      nav li {
-        margin-left: 3em;
-        margin-right: 3em;
-      }
-      nav li a {
-        transition: 0.5s color ease-in-out;
-      }
-
-      .page-title {
-        opacity: 0.75 !important;
-      }
-    </style>
-
-    <script>
-      window.console = window.console || function (t) {};
-    </script>
-
-    <script>
-      if (document.location.search.match(/type=embed/gi)) {
-        window.parent.postMessage("resize", "*");
-      }
-    </script>
+    <!-- Load js file from local files -->
+    <script type="text/javascript" src="js/main_script.js"></script>
   </head>
+  <body>
+    <!-- Scripts for social links -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway+Dots"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Add icon library -->
 
-  <body
-    translate="no"
-    data-new-gr-c-s-check-loaded="14.1020.0"
-    data-gr-ext-installed=""
-  >
-    <div class="container-fluid">
-      <nav class="navbar navbar-inverse">
-        <div class="container-fluid">
-          <ul class="nav navbar-nav">
-            <li><a id="len1" class="hoverable bounce" href="#">Home</a></li>
-            <li><a id="len2" class="hoverable bounce" href="#">About</a></li>
-            <li>
-              <a id="len3" class="hoverable bounce" href="#">Portfolio</a>
-            </li>
-            <li><a id="len4" class="hoverable bounce" href="#">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      <div id="what-the-hell-is-this">
-        <div class="page-title">
-          <h2>Simple Navigation</h2>
-          <p class="lead">
-            Based on Hover.css, the goal of this pen is to create a simple
-            navigation bar <br />
-            that can be easily reused in both mobile and native displays. Mouse
-            over the nav text for animation!
-          </p>
-        </div>
+    <script
+      src="https://kit.fontawesome.com/b78878378b.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Go here for NAV bar help: https://stackoverflow.com/questions/19733447/bootstrap-navbar-with-left-center-or-right-aligned-items -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div
+        class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2"
+        id="navbarSupportedContent"
+      >
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="default.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="true"
+            >
+              Services
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="https://tuition.ldprice.com"
+                  target="_blank"
+                  >Tuition</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-item"
+                  href="https://cleaning.ldprice.com"
+                  target="_blank"
+                  >Cleaning</a
+                >
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="#">Automation</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
       </div>
-    </div>
-    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-8216c69d01441f36c0ea791ae2d4469f0f8ff5326f00ae2d00e4bb7d20e24edb.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script id="rendered-js">
-      $(function () {
-        var str = "#len"; //increment by 1 up to 1-nelemnts
-        $(document).ready(function () {
-          var i, stop;
-          i = 1;
-          stop = 4; //num elements
-          setInterval(function () {
-            if (i > stop) {
-              return;
-            }
-            $("#len" + i++).toggleClass("bounce");
-          }, 500);
-        });
-      });
-      //# sourceURL=pen.js
-    </script>
+      <a class="navbar-brand" href="default.html">ldprice</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div
+        class="navbar-collapse collapse w-100 order-3 dual-collapse2"
+        id="navbarSupportedContent"
+      >
+        <!-- Social Nav bar Links here -->
+        <ul class="navbar-nav ml-auto nav-flex-icons">
+          <li class="nav-item">
+            <a href="#" class="fa fa-twitter ICON-twitter nav-social-stuff"></a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="fa fa-github ICON-github nav-social-stuff"></a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="#"
+              class="fa fa-linkedin ICON-linkedin nav-social-stuff"
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Social Links start -->
+    <section>
+      <ul id="services">
+        <li>
+          <div class="facebook">
+            <a href="https://facebook.com/colorlib/">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+          </div>
+          <span>Facebook</span>
+        </li>
+        <li>
+          <div class="twitter">
+            <a href="https://twitter.com/colorlib/">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+          </div>
+          <span>Twitter</span>
+        </li>
+        <li>
+          <div class="youtube">
+            <a href="https://www.youtube.com/c/Colorlib">
+              <i class="fa fa-youtube" aria-hidden="true"></i>
+            </a>
+          </div>
+          <span>YouTube</span>
+        </li>
+        <li>
+          <div class="linkedin">
+            <a href="https://www.linkedin.com/company/colorlib">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+          </div>
+          <span>LinkedIn</span>
+        </li>
+        <li>
+          <div class="instagram">
+            <a href="https://www.linkedin.com/company/colorlib">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+          <span>Instagram</span>
+        </li>
+        <li>
+          <div class="github">
+            <a href="https://github.com/puikinsh/">
+              <i class="fa fa-github" aria-hidden="true"></i>
+            </a>
+          </div>
+          <span>Github</span>
+        </li>
+      </ul>
+    </section>
+    <!-- Social Links end -->
+
+    <!-- jquery needed for lots of things... -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Popper needed for drop downs -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
