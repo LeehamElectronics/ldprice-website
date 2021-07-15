@@ -12,17 +12,14 @@ body {
 body {
   font-family: "Alegreya Sans", sans-serif;
   position: relative;
+  /* Margin bottom by footer height */
+  margin-bottom: 300px;
 }
-
 /* Sticky footer position and size
 -------------------------------------------------- */
 html {
   position: relative;
   min-height: 100%;
-}
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 300px;
 }
 .footer {
   position: absolute;
