@@ -364,6 +364,10 @@ button {
   width: 22%;
 }
 
+.other_link {
+  width: 56%;
+}
+
 .sizes {
   display: grid;
   color: $pink;
@@ -419,4 +423,9 @@ button {
 
 .slider_main {
   background: #aaa;
+}
+
+/* This is for some cusotm buttons wow */
+.long-button {
+  width: 40px;
 }
