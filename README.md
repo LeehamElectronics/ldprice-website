@@ -1,5 +1,5 @@
 # [ldprice.com](https://www.ldprice.com)
-## This repo contians the software I wrote for my personal website.
+## This repo contains the software I wrote for my personal website.
 
 #
 
