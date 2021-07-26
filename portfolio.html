@@ -27,6 +27,13 @@
     <!-- Load js file from local files -->
     <script type="text/javascript" src="js/main_script.js"></script>
 
+    <script>
+      $(".size").on("click", function () {
+        $(this).toggleClass("focus").siblings().removeClass("focus");
+      });
+      console.log("yeee");
+    </script>
+
     <!-- Scripts for social links -->
     <link
       href="https://fonts.googleapis.com/css?family=Raleway+Dots"
@@ -56,7 +63,7 @@
           <li class="nav-item">
             <a class="nav-link" href="default.html">Home</a>
           </li>
-          <li class="nav-item active">
+          <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item dropdown">
@@ -93,7 +100,7 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item">
+          <li class="nav-item active">
             <a class="nav-link" href="portfolio.html">Portfolio</a>
           </li>
           <li class="nav-item">
@@ -138,49 +145,56 @@
     <main>
       <section class="home-intro">
         <h1 class="heading_1">Liam Price</h1>
-        <h2 class="heading_2">Self-Employed Tutor and Window Cleaner</h2>
+        <h2 class="heading_2">
+          Welcome to my Portfolio of Open-Source Development!
+        </h2>
       </section>
 
       <div class="home-more-stuff">
-        <div class="more-stuff-grid">
-          <img
-            src="https://unsplash.it/400"
-            alt=""
-            class="slide-in from-left"
-          />
-          <p class="slide-in from-right">
-            This website is still under production...
-          </p>
+        <div class="more-stuff-grid slider_main">
+          <div class="slide-in from-left">
+            <img src="images/aqb_400.png" alt="" />
+            <p>VCE Systems Engineering Automated Quad Bike Project</p>
+          </div>
         </div>
-        <div class="more-stuff-grid">
-          <p class="slide-in from-left">
-            This website is still under production...
-          </p>
+      </div>
+
+      <div class="card_container">
+        <div class="images">
           <img
-            src="https://unsplash.it/401"
-            alt=""
-            class="slide-in from-right"
+            class="card_img"
+            src="https://museumsvictoria.com.au/media/16849/liam-price-709.jpg?width=863&height=576&bgcolor=fff"
           />
         </div>
-        <div class="more-stuff-grid">
-          <img
-            src="https://unsplash.it/402"
-            alt=""
-            class="slide-in from-left"
-          />
-          <p class="slide-in from-right">
-            This website is still under production...
-          </p>
+        <div class="slideshow-buttons">
+          <div class="one"></div>
+          <div class="two"></div>
+          <div class="three"></div>
+          <div class="four"></div>
         </div>
-        <div class="more-stuff-grid">
-          <p class="slide-in from-left">
-            This website is still under production...
+        <p class="pick">View Images</p>
+        <div class="sizes">
+          <div class="size">1</div>
+          <div class="size">2</div>
+          <div class="size">3</div>
+          <div class="size">4</div>
+          <div class="size">5</div>
+          <div class="size">6</div>
+          <div class="size">7</div>
+          <div class="size">8</div>
+        </div>
+        <div class="product">
+          <p>Integrated Technologies</p>
+          <h1 class="h1_card">Exploration IoT Robot</h1>
+          <h2 class="h2_card">2020</h2>
+          <p class="desc" class="p_card">
+            A robot tank that can be controlled via 4G cellular, control with a
+            gaming steering wheel and footpedal.
           </p>
-          <img
-            src="https://unsplash.it/401"
-            alt=""
-            class="slide-in from-right"
-          />
+          <div class="buttons">
+            <button class="add">View GitHub</button>
+            <button class="like"><span>♥</span></button>
+          </div>
         </div>
       </div>
 
